@@ -1,0 +1,161 @@
+$OrangeDefoult: #FF862F;
+$BlackDefoultText: #333;
+$GrayDefoulText: #999;
+$VioletDefoultText: #A65CF0;
+$WhiteBG: #FFF;
+$GrayBG: #F7F7F7;
+
+@mixin container {
+	max-width: 1280px;
+	margin: 0 auto;
+
+	@media (max-width: 1300px) {
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+
+	@media (max-width: 992px) {
+		padding-left: 72px;
+		padding-right: 72px;
+	}
+
+	@media (max-width: 700px) {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}
+
+@mixin OpenSans {
+	font-family: 'OpenSans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+@mixin Playfair {
+	font-family: 'PlayfairDisplay';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 60px;
+	line-height: 120%;
+	color: #D5B986;
+
+	@media (max-width: 700px) {
+		font-size: 24px;
+	}
+}
+
+@mixin VioletBtn {
+	padding: 20px 48px;
+	border: 2px solid $VioletDefoultText;
+	background-color: $VioletDefoultText;
+	border-radius: 10px;
+
+	font-weight: 700;
+	line-height: 16px;
+	color: $WhiteBG;
+	transition: border .3s ease-in-out,
+		background-color .3s ease-in-out,
+		color .3s ease-in-out;
+
+	&:hover {
+		border: 2px solid #C998FB;
+		background-color: #C998FB;
+	}
+
+	&:focus {
+		border: 2px solid #7033AC;
+		background-color: #C998FB;
+	}
+
+	&:active {
+		border: 2px solid #7033AC;
+		background-color: #7033AC;
+	}
+
+	&:disabled {
+		border: 2px solid #EAEAEA;
+		background-color: #EAEAEA;
+		color: #999;
+	}
+}
+
+@mixin VioletOpacityBtn {
+	padding: 17px 33px;
+	background-color: transparent;
+	border-radius: 10px;
+
+	font-weight: 600;
+	line-height: 16px;
+	color: $VioletDefoultText;
+	border: 2px solid $VioletDefoultText;
+	transition: border .3s ease-in-out,
+		background-color .3s ease-in-out,
+		color .3s ease-in-out;
+
+	&:hover {
+		border: 2px solid #A65CF0;
+		background-color: #A65CF0;
+		color: #fff;
+	}
+
+	&:focus {
+		border: 2px solid #A65CF0;
+		background-color: #C998FB;
+		color: #fff;
+	}
+
+	&:active {
+		border: 2px solid #7033AC;
+		background-color: #7033AC;
+		color: #fff;
+	}
+}
+
+@mixin SwiperButton {
+	svg {
+		g path {
+			transition: stroke .3s ease-in-out;
+		}
+
+		g circle {
+			transition: stroke .3s ease-in-out;
+		}
+	}
+
+	&:hover {
+
+		svg g path {
+			stroke: #fff;
+		}
+
+		svg g circle {
+			stroke: #A65CF0;
+			fill: #A65CF0;
+		}
+
+	}
+
+	&:focus {
+		svg g path {
+			stroke: #fff;
+		}
+
+		svg g circle {
+			stroke: #A65CF0;
+			fill: #C998FB;
+		}
+	}
+
+	&:active {
+		svg g path {
+			stroke: #fff;
+		}
+
+		svg g circle {
+			stroke: #7033AC;
+			fill: #7033AC;
+		}
+	}
+}

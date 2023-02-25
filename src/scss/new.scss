@@ -1,0 +1,90 @@
+.new {
+	margin-bottom: 70px;
+	background: transparent url("../img/new.png") no-repeat center center / cover;
+
+	@media (min-resolution: 2dppx) {
+		background: transparent url("../img/new@2x.png") no-repeat center center / cover;
+	}
+
+	@media (max-width: 1024px) {
+		background: transparent url("../img/new-1024.png") no-repeat center center / cover;
+
+
+		@media (min-resolution: 2dppx) {
+			background: transparent url("../img/new-1024@2x.png") no-repeat center center / cover;
+		}
+	}
+
+	@media (max-width: 768px) {
+		background: transparent url("../img/new-768.png") no-repeat center center / cover;
+
+
+		@media (min-resolution: 2dppx) {
+			background: transparent url("../img/new-768@2x.png") no-repeat center center / cover;
+		}
+	}
+
+	@media (max-width: 320px) {
+		background: transparent url("../img/new-320.png") no-repeat center center / cover;
+		height: 210px;
+
+		@media (min-resolution: 2dppx) {
+			background: transparent url("../img/new-320@2x.png") no-repeat center center / cover;
+		}
+	}
+
+	@media (max-width: 700px) {
+		margin-bottom: 161px;
+	}
+
+	.new__content {
+		position: relative;
+		@include container;
+		padding-top: 150px;
+		padding-bottom: 150px;
+
+		@media (max-width: 992px) {
+			padding-left: 36px;
+		}
+
+		@media (max-width: 700px) {
+			padding: 30px 10px;
+		}
+
+		.new__title {
+			@include Playfair;
+			margin-bottom: 5px;
+
+			@media (max-width: 700px) {
+				margin-bottom: 2px;
+			}
+		}
+
+		.new__text {
+
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 120%;
+			color: #fff;
+			margin-bottom: 48px;
+
+			@media (max-width: 700px) {
+				font-weight: 400;
+				font-size: 16px;
+			}
+		}
+
+		.new__btn {
+			@include VioletBtn;
+			padding-left: 32px;
+			padding-right: 32px;
+
+			@media (max-width: 700px) {
+				position: absolute;
+				top: 136%;
+				left: 12px;
+				width: calc(100% - 24px);
+			}
+		}
+	}
+}

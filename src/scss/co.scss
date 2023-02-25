@@ -1,0 +1,160 @@
+@import "var";
+
+.co {
+	@include container;
+
+	margin-bottom: 70px;
+
+	.co__map {
+		margin-bottom: 28px;
+
+		.co__map-link {
+			font-size: 14px;
+			line-height: 100%;
+			color: #999;
+
+			&:last-child {
+				color: #7033AC;
+			}
+		}
+
+		@media (max-width: 700px) {
+			display: none;
+
+		}
+	}
+
+	.co__content {
+		width: 66%;
+
+		@media (max-width: 1300px) {
+			width: 90%;
+		}
+
+		@media (max-width: 992px) {
+			width: 100%;
+		}
+
+		.co__title {
+			font-size: 32px;
+			line-height: 100%;
+			color: #333;
+			margin-bottom: 32px;
+
+			@media (max-width: 700px) {
+				font-size: 24px;
+			}
+		}
+
+		h2 {
+			font-size: 24px;
+			line-height: 33px;
+			color: #333;
+			margin-bottom: 12px;
+
+			@media (max-width: 700px) {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+
+		p {
+			line-height: 180%;
+			color: #666;
+
+			@media (max-width: 700px) {
+				font-size: 14px;
+			}
+		}
+
+		.co__vendor {
+			margin-bottom: 32px;
+		}
+
+		.co__benefit {
+			margin-bottom: 32px;
+
+			.co__benefit-1,
+			.co__benefit-2,
+			.co__benefit-3 {
+				display: flex;
+				width: 73%;
+
+				@media (max-width: 1300px) {
+					width: 75%;
+				}
+
+				@media (max-width: 992px) {
+					width: 100%;
+				}
+
+				.co__benefit {
+					line-height: 150%;
+				}
+
+				.co__svg {
+					margin-right: 12px;
+				}
+			}
+
+			.co__benefit-1,
+			.co__benefit-2 {
+				margin-bottom: 12px;
+			}
+		}
+
+		.co__benefit2 {
+			margin-bottom: 32px;
+
+			.co__benefit2-subtitle {
+				color: #FF862F;
+				margin-bottom: 12px;
+			}
+
+			.co__benefit2-text:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		.co__safeguard {
+			.co__safeguard-list {
+				padding-left: 18px;
+				margin-bottom: 32px;
+
+				.co__safeguard-item {
+					padding-left: 12px;
+					line-height: 180%;
+					color: #666;
+
+					@media (max-width: 700px) {
+						font-size: 14px;
+					}
+
+					&::marker {
+						color: #FF862F;
+					}
+				}
+			}
+
+			.co__safeguard-time {
+				display: flex;
+
+				img {
+					margin-right: 32px;
+				}
+
+				.co__safeguard-text {
+					font-size: 24px;
+					line-height: 150%;
+					color: #333;
+
+					@media (max-width: 700px) {
+						font-size: 16px;
+					}
+				}
+			}
+
+
+		}
+	}
+}

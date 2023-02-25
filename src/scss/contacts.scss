@@ -1,0 +1,270 @@
+.contacts {
+	@include container;
+
+	display: flex;
+	margin-bottom: 70px;
+
+	.contacts__content {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		@media (max-width: 992px) {
+			width: 70%;
+		}
+
+		@media (max-width: 700px) {
+			width: 100%;
+		}
+
+		.contacts__title {
+			font-size: 32px;
+			line-height: 100%;
+			color: #333;
+			margin-bottom: 10px;
+
+			@media (max-width: 700px) {
+				font-size: 24px;
+				margin-bottom: 8px;
+			}
+		}
+
+		.contacts__text {
+			font-size: 14px;
+			line-height: 19px;
+			color: #666;
+			margin-bottom: 18px;
+
+			#svg__tool,
+			#svg__tool path {
+				transition: fill .3s ease;
+			}
+
+			#svg__tool:hover path {
+				fill: orangered;
+			}
+
+
+
+			@media (max-width: 1300px) {
+				width: 86%;
+				margin-bottom: 16px;
+			}
+
+			@media (max-width: 700px) {
+				width: 100%;
+			}
+		}
+
+		.contacts__form {
+
+			margin-right: 30px;
+			display: flex;
+			flex-direction: column;
+
+			label {
+				position: relative;
+
+				.just-validate-error-label {
+					position: absolute;
+					top: -20px;
+					left: 20px;
+					font-size: 14px;
+					line-height: 16px;
+				}
+			}
+
+			#name {
+				background-color: $GrayBG;
+				line-height: 40px;
+				color: #333;
+				margin-bottom: 30px;
+				width: 100%;
+				padding: 5px 0 5px 18px;
+				border-radius: 10px;
+				border: solid 2px transparent;
+				transition: border .3s ease-out,
+					background-color .3s ease-out;
+
+				&:hover {
+					background-color: #EAEAEA;
+				}
+
+				&:focus {
+					border: 2px solid #A65CF0;
+					background-color: #F8EFFF;
+				}
+
+				&:active {
+					background-color: $GrayBG;
+
+				}
+
+				&::placeholder {
+					line-height: 40px;
+					color: #999;
+				}
+
+				&.just-validate-error-field {
+					border: #FF6972 2px solid;
+				}
+			}
+
+			#tel {
+				background-color: $GrayBG;
+				line-height: 40px;
+				color: #333;
+				margin-bottom: 30px;
+				width: 100%;
+				padding: 5px 0 5px 18px;
+				border-radius: 10px;
+				border: solid 2px transparent;
+				transition: border .3s ease-out,
+					background-color .3s ease-out;
+
+				&:hover {
+					background-color: #EAEAEA;
+				}
+
+				&:focus {
+					border: 2px solid #A65CF0;
+					background-color: #F8EFFF;
+				}
+
+				&:active {
+					background-color: $GrayBG;
+
+				}
+
+				&::placeholder {
+					line-height: 40px;
+					color: #999;
+				}
+
+				&.just-validate-error-field {
+					border: #FF6972 2px solid;
+				}
+			}
+
+			#email {
+				background-color: $GrayBG;
+				line-height: 40px;
+				color: #333;
+				margin-bottom: 28px;
+				width: 100%;
+				padding: 5px 0 5px 18px;
+				border-radius: 10px;
+				border: solid 2px transparent;
+				transition: border .3s ease-out,
+					background-color .3s ease-out;
+
+				&:hover {
+					background-color: #EAEAEA;
+				}
+
+				&:focus {
+					border: 2px solid #A65CF0;
+					background-color: #F8EFFF;
+				}
+
+				&:active {
+					background-color: $GrayBG;
+
+				}
+
+				&::placeholder {
+					line-height: 40px;
+					color: #999;
+				}
+
+				&.just-validate-error-field {
+					border: #FF6972 2px solid;
+				}
+			}
+
+			.contacts__btn {
+				@include VioletBtn;
+				align-self: flex-start;
+				padding: 19px 34px;
+				margin-bottom: 12px;
+
+
+			}
+
+			.contacts__agree {
+
+				.contacts__custom-checkbox {
+					position: absolute;
+					z-index: -1;
+					opacity: 0;
+				}
+
+				label {
+					font-size: 14px;
+					line-height: 19px;
+					color: #333333;
+
+					@media (max-width: 700px) {
+						font-size: 12px;
+						line-height: 16px;
+					}
+
+					a {
+						color: $VioletDefoultText;
+						text-decoration: underline;
+						padding-left: 5px;
+
+						@media (max-width: 700px) {
+							padding-left: 2px;
+						}
+					}
+				}
+
+				.contacts__custom-checkbox+label {
+					display: inline-flex;
+					align-items: center;
+					user-select: none;
+				}
+
+				.contacts__custom-checkbox+label::before {
+					content: '';
+					display: inline-block;
+					width: 14px;
+					height: 14px;
+					flex-shrink: 0;
+					flex-grow: 0;
+					border: 1px solid #999;
+					border-radius: 2px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					margin-right: 10px;
+
+				}
+
+				.contacts__custom-checkbox:checked+label::before {
+					border-color: $VioletDefoultText;
+					background-color: $VioletDefoultText;
+					background-image: url("../img/agree.png");
+				}
+			}
+		}
+
+
+	}
+
+	picture {
+		padding-top: 27px;
+
+		@media (max-width: 1300px) {
+			padding-top: 77px;
+		}
+
+		@media (max-width: 992px) {
+			padding-top: 13px;
+		}
+
+		@media (max-width: 700px) {
+			display: none;
+		}
+	}
+}

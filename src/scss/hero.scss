@@ -1,0 +1,187 @@
+@import "var";
+
+
+.hero {
+	margin: 0 auto;
+	margin-bottom: 69px;
+
+	.hero__swiper {
+		@media (max-width: 700px) {
+			margin-bottom: 32px;
+		}
+
+		.hero__content {
+			@include container;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 80px;
+			padding-bottom: 80px;
+			justify-content: space-between;
+
+			@media (max-width: 700px) {
+				padding-top: 30px;
+				padding-left: 30px;
+			}
+
+			.hero__title {
+				margin-bottom: 46px;
+
+				font-weight: 700;
+				font-size: 48px;
+				line-height: 66px;
+				color: $GrayDefoulText;
+
+				@media (max-width: 1300px) {
+					margin-bottom: 48px;
+				}
+
+				@media (max-width: 992px) {
+					margin-bottom: 46px;
+				}
+
+				@media (max-width: 700px) {
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
+
+			.hero__btn {
+				@include VioletBtn;
+
+				@media (max-width: 700px) {
+					display: none;
+				}
+			}
+
+		}
+
+		.hero__swiper-slide:nth-child(1) {
+			background: transparent url("../img/hero_img-1.png") no-repeat center center / cover;
+
+			@media (min-resolution: 2dppx) {
+				background: transparent url("../img/hero_img-1@2x.png") no-repeat center center / cover;
+			}
+
+			@media (max-width: 1024px) {
+				background: transparent url("../img/hero_img-1024-1.png") no-repeat center center / cover;
+
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-1024-1@2x.png") no-repeat center center / cover;
+				}
+			}
+
+			@media (max-width: 768px) {
+				background: transparent url("../img/hero_img-768-1.png") no-repeat center center / cover;
+
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-768-1@2x.png") no-repeat center center / cover;
+				}
+			}
+
+			@media (max-width: 320px) {
+				background: transparent url("../img/hero_img-320-1.png") no-repeat center center / cover;
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-320-1@2x.png") no-repeat center center / cover;
+				}
+			}
+
+
+		}
+
+		.hero__swiper-slide:nth-child(2) {
+			background: transparent url("../img/hero_img-2.png") no-repeat center center / cover;
+
+			@media (min-resolution: 2dppx) {
+				background: transparent url("../img/hero_img-2@2x.png") no-repeat center center / cover;
+			}
+
+			@media (max-width: 1024px) {
+				background: transparent url("../img/hero_img-1024-2.png") no-repeat center center / cover;
+
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-1024-2@2x.png") no-repeat center center / cover;
+				}
+			}
+
+			@media (max-width: 768px) {
+				background: transparent url("../img/hero_img-768-2.png") no-repeat center center / cover;
+
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-768-2@2x.png") no-repeat center center / cover;
+				}
+			}
+
+			@media (max-width: 320px) {
+				background: transparent url("../img/hero_img-320-2.png") no-repeat center center / cover;
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-320-2@2x.png") no-repeat center center / cover;
+				}
+			}
+
+
+		}
+
+		.hero__swiper-slide:nth-child(3) {
+			background: transparent url("../img/hero_img-3.png") no-repeat center center / cover;
+
+			@media (min-resolution: 2dppx) {
+				background: transparent url("../img/hero_img-3@2x.png") no-repeat center center / cover;
+			}
+
+			@media (max-width: 1024px) {
+				background: transparent url("../img/hero_img-1024-3.png") no-repeat center center / cover;
+
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-1024-3@2x.png") no-repeat center center / cover;
+				}
+			}
+
+			@media (max-width: 768px) {
+				background: transparent url("../img/hero_img-768-3.png") no-repeat center center / cover;
+
+
+				@media (min-resolution: 2dppx) {
+					background: transparent url("../img/hero_img-768-3@2x.png") no-repeat center center / cover;
+				}
+			}
+
+			@media (max-width: 320px) {
+				background: transparent url("../img/hero_img-320-3.png") no-repeat center center / cover;
+			}
+
+			@media (min-resolution: 2dppx) {
+				background: transparent url("../img/hero_img-320-3@2x.png") no-repeat center center / cover;
+			}
+
+			.hero__title {
+				color: #fff
+			}
+		}
+	}
+
+	.hero__btns {
+		@include container;
+
+		.hero__btn-xs {
+			display: none;
+
+			@media (max-width: 700px) {
+				display: flex;
+				@include VioletBtn;
+				justify-content: center;
+				width: 100%;
+			}
+
+		}
+	}
+
+
+}
